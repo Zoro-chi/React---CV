@@ -1,11 +1,51 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Montserrat", sans-serif;
+}
+#id {
+  display: flex;
+  justify-content: center;
+}
+.app {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
 .header {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.form-divs {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  box-shadow: 4px 4px 5px rgba(43, 41, 41, 0.8);
+}
+form {
+  width: 50vw;
+  display: flex;
+  flex-flow: column;
+  gap: 0.3rem;
+}
+input {
+  width: 100%;
+  border-radius: 50px;
+  height: 1.7rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+}
+.btn-save {
+  width: 4rem;
+  padding: 0.3rem;
+  color: greenyellow;
+  background-color: beige;
+  cursor: pointer;
 }
