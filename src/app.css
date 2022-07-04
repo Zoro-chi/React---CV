@@ -54,7 +54,8 @@ textarea {
   padding-left: 1rem;
 }
 .btn-save {
-  width: 4rem;
+  width: 20rem;
+  margin-top: 1.5rem;
   padding: 0.3rem;
   color: greenyellow;
   background-color: beige;
