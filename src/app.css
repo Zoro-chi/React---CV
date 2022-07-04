@@ -27,13 +27,17 @@
   justify-content: center;
   align-items: center;
   width: 80vw;
-  box-shadow: 4px 4px 5px rgba(43, 41, 41, 0.8);
+  /* box-shadow: 4px 4px 5px rgba(43, 41, 41, 0.8); */
 }
 form {
   width: 50vw;
   display: flex;
   flex-flow: column;
   gap: 0.3rem;
+}
+form > h2 {
+  text-align: center;
+  padding: 0.5rem;
 }
 input {
   width: 100%;

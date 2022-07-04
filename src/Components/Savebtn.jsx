@@ -12,14 +12,18 @@ class Savebtn extends Component {
     this.onSave = this.onSave.bind(this);
   }
 
-  onSave = (e) => {
-    console.log(e);
+  onSave = () => {
     this.setState({ saved: !this.state.saved });
+    console.log(this.state);
   };
 
   render() {
     return (
-      <button className="btn-save" onClick={this.onSave}>
+      <button
+        className="btn-save"
+        // type="button"
+        onClick={this.props.save}
+      >
         Save
       </button>
     );
