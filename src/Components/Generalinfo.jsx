@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import uniqid from "uniqid";
 
 import "../app.css";
-import Savebtn from "./Savebtn";
 
 class GeneralInfo extends Component {
   constructor(props) {
@@ -13,16 +12,8 @@ class GeneralInfo extends Component {
       email: "",
       phone: "",
     };
-    this.infoSet = this.infoSet.bind(this);
   }
-    infoSet = (e) => {
-    this.setState({
-      name: "",
-      email: "",
-      phone: "",
-    });
-    console.log(this.state);
-  };
+
   render() {
     const myStyle = {
       border: "2px solid dodgerblue",
@@ -72,7 +63,6 @@ class GeneralInfo extends Component {
           style={myStyle}
           required
         />
-        <Savebtn save={this.infoSet}/>
       </form>
     );
   }

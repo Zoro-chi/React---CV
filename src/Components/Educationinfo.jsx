@@ -1,29 +1,18 @@
-import React { Component } from "react";
+import React, { Component } from "react";
 
-import Savebtn from "./Savebtn"
-import "../app.css"
+import "../app.css";
 
 class EducationInfo extends Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            schoolName: e.target.value,
-            titleOfStudy: e.target.value,
-            dateOfStudyFrom: e.target.value,
-            dateOfStudyTo: e.target.value,
-        };
-         this.infoSet = this.infoSet.bind(this);
-    }
-    infoSet = (e) => {
-    this.setState({
-      schoolName: this.state.schoolName,
-      titleOfStudy: this.state.titleOfStudy,
-      dateOfStudyFrom: this.state.dateOfStudyFrom,
-      dateOfStudyTo: this.state.dateOfStudyTo
-    });
-    console.log(this.state);
-  };
+    this.state = {
+      schoolName: "",
+      titleOfStudy: "",
+      dateOfStudyFrom: "",
+      dateOfStudyTo: "",
+    };
+  }
 
   render() {
     const myStyle = {
@@ -45,7 +34,7 @@ class EducationInfo extends Component {
           placeholder="School Name"
           value={this.state.schoolName}
           onChange={(e) => {
-            this.setState({ name: e.target.value });
+            this.setState({ schoolName: e.target.value });
           }}
           style={myStyle}
         />
@@ -56,34 +45,35 @@ class EducationInfo extends Component {
           placeholder="Title Of Study"
           value={this.state.titleOfStudy}
           onChange={(e) => {
-            this.setState({ email: e.target.value });
+            this.setState({ titleOfStudy: e.target.value });
           }}
           style={myStyle}
         />
         <input
-          type="text"
+          type="date"
           id="dateOfStudyFrom"
           className="input"
           placeholder="Date of Study (From)"
           value={this.state.dateOfStudyFrom}
           onChange={(e) => {
-            this.setState({ phone: e.target.value });
+            this.setState({ dateOfStudyFrom: e.target.value });
           }}
           style={myStyle}
         />
         <input
-          type="text"
+          type="date"
           id="dateOfStudyTo"
           className="input"
           placeholder="Date of Study (To)"
           value={this.state.dateOfStudyTo}
           onChange={(e) => {
-            this.setState({ phone: e.target.value });
+            this.setState({ dateOfStudyTo: e.target.value });
           }}
           style={myStyle}
         />
-        <Savebtn save={this.infoSet}/>
       </form>
     );
   }
 }
+
+export default EducationInfo;
