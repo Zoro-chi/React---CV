@@ -55,6 +55,7 @@ class App extends Component {
           <GeneralInfo />
           <EducationInfo />
           <WorkExperience />
+          <br />
           <Savebtn save={this.infoSet} />
         </div>
       </div>
