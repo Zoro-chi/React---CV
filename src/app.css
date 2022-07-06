@@ -10,39 +10,47 @@
   display: flex;
   justify-content: center;
 }
-.app {
+.collection-page {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  background-image: linear-gradient(45deg, black, silver);
 }
 .header {
   width: 100vw;
   display: flex;
   justify-content: center;
-  margin-bottom: 3rem;
+  padding: 1rem 0;
+  font-size: 1.25rem;
+  font-style: oblique;
+  color: whitesmoke;
+  text-decoration: overline;
 }
 .form-divs {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  width: 80vw;
+  width: 60vw;
   box-shadow: 4px 4px 5px rgba(43, 41, 41, 0.8);
-  background-image: linear-gradient(45deg, burlywood, antiquewhite);
+  background-color: cadetblue;
   border-radius: 15px;
+  padding: 1rem 0;
 }
 form {
-  width: 50vw;
+  width: inherit;
   display: flex;
   flex-flow: column;
   gap: 0.3rem;
+  align-items: center;
 }
 form > h2 {
   text-align: center;
-  padding: 0.5rem;
+  padding: 1rem;
+  color: darkslategray;
 }
 input {
-  width: 100%;
+  width: 60%;
   border-radius: 50px;
   height: 1.7rem;
   padding: 0.5rem;
@@ -52,12 +60,30 @@ textarea {
   border-radius: 10px;
   padding: 0.5rem;
   padding-left: 1rem;
+  width: 60%;
 }
-.btn-save {
-  width: 20rem;
+a {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+button:hover {
+  background-color: mediumspringgreen;
+}
+button {
+  width: 40%;
   margin-top: 1.5rem;
   padding: 0.3rem;
-  color: greenyellow;
-  background-color: beige;
+  color: black;
+  background-color: paleturquoise;
   cursor: pointer;
+  border-radius: 10px;
+  font-weight: 500;
+  border: none;
+}
+.buttons-div {
+  width: inherit;
+  display: flex;
+  justify-content: center;
 }
