@@ -87,3 +87,12 @@ button {
   display: flex;
   justify-content: center;
 }
+#photo {
+  display: none;
+} 
+.photo {
+  cursor: pointer;
+  border: 1px solid black;
+  height: 200px;
+  width: 200px;
+}

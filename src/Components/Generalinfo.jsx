@@ -11,6 +11,7 @@ class GeneralInfo extends Component {
       name: "",
       email: "",
       phone: "",
+      address: "",
     };
   }
 
@@ -53,7 +54,7 @@ class GeneralInfo extends Component {
         />
         <input
           type="tel"
-          id="name"
+          id="phone"
           className="input"
           placeholder="Phone Number"
           value={this.state.phone}
@@ -63,6 +64,22 @@ class GeneralInfo extends Component {
           style={myStyle}
           required
         />
+        <input
+          type="text"
+          id="address"
+          className="input"
+          placeholder="Address"
+          value={this.state.address}
+          onChange={(e) => {
+            this.setState({ address: e.target.value });
+          }}
+          style={myStyle}
+          required
+        />
+        {/* <label className="photo">
+          Add Photo
+          <input id="photo" type="file" />
+        </label> */}
       </form>
     );
   }

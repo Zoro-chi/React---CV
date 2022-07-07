@@ -24,29 +24,24 @@ class App extends Component {
       from: "",
       to: "",
     };
-    this.infoSet = this.infoSet.bind(this);
+    this.saveChangeHandler = this.saveChangeHandler.bind(this);
   }
 
-  infoSet = () => {
-    this.setState(
-      {
-        name: this.state.name,
-        email: this.state.email,
-        phone: this.state.phone,
-        schoolName: this.state.schoolName,
-        titleOfStudy: this.state.titleOfStudy,
-        dateOfStudyFrom: this.state.dateOfStudyFrom,
-        dateOfStudyTo: this.state.dateOfStudyTo,
-        companyName: this.state.companyName,
-        positionTitle: this.state.positionTitle,
-        mainTasks: this.state.mainTasks,
-        from: this.state.from,
-        to: this.state.to,
-      },
-      () => {
-        console.log(this.state);
-      }
-    );
+  saveChangeHandler = () => {
+    this.setState({
+      name: document.querySelector("#name").value,
+      email: document.querySelector("#email").value,
+      phone: document.querySelector("#phone").value,
+      schoolName: document.querySelector("#schoolName").value,
+      titleOfStudy: document.querySelector("#titleOfStudy").value,
+      dateOfStudyFrom: document.querySelector("#dateOfStudyFrom").value,
+      dateOfStudyTo: document.querySelector("#dateOfStudyTo").value,
+      companyName: document.querySelector("#companyName").value,
+      positionTitle: document.querySelector("#positionTitle").value,
+      mainTasks: document.querySelector("#mainTasks").value,
+      from: document.querySelector("#from").value,
+      to: document.querySelector("#to").value,
+    });
   };
 
   render() {
@@ -56,13 +51,11 @@ class App extends Component {
           <Routes>
             <Route
               path="/"
-              element={
-                <CollectionPage save={this.infoSet} previewState={this.state} />
-              }
+              element={<CollectionPage onSave={this.saveChangeHandler} />}
             />
             <Route
               path="/preview"
-              element={<PreviewPage state={this.state} />}
+              element={<PreviewPage previewState={this.state} />}
             />
           </Routes>
         </div>

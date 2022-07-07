@@ -7,19 +7,14 @@ import Header from "./Header.jsx";
 import GeneralInfo from "./Generalinfo.jsx";
 import EducationInfo from "./Educationinfo.jsx";
 import WorkExperience from "./Workexperience.jsx";
-import Previewbtn from "./Previewbtn.jsx";
 
 class CollectionPage extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      preview: props.previewState,
-      save: props.save,
-    };
   }
 
   render() {
+    const { onSave } = this.props;
     return (
       <div className="collection-page">
         <Header />
@@ -29,7 +24,7 @@ class CollectionPage extends Component {
           <WorkExperience />
           <div className="buttons-div">
             <Link to="/preview">
-              <Previewbtn save={this.state.save} />
+              <button onClick={onSave}>Save</button>
             </Link>
           </div>
         </div>
