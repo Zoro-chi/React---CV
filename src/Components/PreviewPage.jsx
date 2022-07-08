@@ -13,6 +13,7 @@ class PreviewPage extends Component {
     return (
       <div>
         <h1> Preview Page </h1>
+
         <Link to="/">
           <button> Edit </button>
         </Link>
