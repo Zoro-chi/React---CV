@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import uniqid from "uniqid";
 
 import "../app.css";
 import Header from "./Header.jsx";

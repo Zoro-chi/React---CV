@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import uniqid from "uniqid";
 
 import "./app.css";
 import CollectionPage from "./Components/collectionPage.jsx";
