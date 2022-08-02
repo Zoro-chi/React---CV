@@ -52,8 +52,7 @@ class WorkExperience extends Component {
         />
         <textarea
           id="mainTasks"
-          className="textarea"
-          rows="6"
+          rows="5"
           placeholder="Main Tasks"
           value={this.state.mainTasks}
           onChange={(e) => {

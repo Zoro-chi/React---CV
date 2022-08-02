@@ -11,6 +11,7 @@ class EducationInfo extends Component {
       titleOfStudy: "",
       dateOfStudyFrom: "",
       dateOfStudyTo: "",
+      addInfo: "",
     };
   }
 
@@ -70,6 +71,13 @@ class EducationInfo extends Component {
             this.setState({ dateOfStudyTo: e.target.value });
           }}
           style={myStyle}
+        />
+        <textarea
+          id="additionalInfo"
+          rows="3"
+          placeholder="Additional Info"
+          value={this.addInfo}
+          onChange={(e) => this.setState({ addInfo: e.target.value })}
         />
       </form>
     );

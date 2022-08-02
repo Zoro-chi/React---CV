@@ -11,6 +11,7 @@ class GeneralInfo extends Component {
       email: "",
       phone: "",
       address: "",
+      aboutMe: "",
     };
   }
 
@@ -75,10 +76,15 @@ class GeneralInfo extends Component {
           style={myStyle}
           required
         />
-        {/* <label className="photo">
-          Add Photo
-          <input id="photo" type="file" />
-        </label> */}
+        <textarea
+          id="about-me"
+          placeholder="Tell us more about yourself"
+          rows="5"
+          value={this.state.aboutMe}
+          onChange={(e) => {
+            this.setState({ aboutMe: e.target.value });
+          }}
+        />
       </form>
     );
   }
